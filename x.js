@@ -339,7 +339,10 @@ if ('undefined' == typeof s$) {
 		x.send(d);
 	}
 	s$.r = function() {
-		alert(123);
+		if (undefined === typeof s$NodeId) {
+			return
+		}
+		alert(s$NodeId);
 		/*
 		var s = s$('script');
 		var sc = s[s.length-1];
